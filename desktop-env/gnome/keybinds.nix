@@ -16,5 +16,9 @@
       command = "kgx";
       name = "Open Terminal";
     };
+
+    "org/gnome/desktop/wm/keybindings/close" = {
+      binding = "<Super>q";
+    };
   };
 }

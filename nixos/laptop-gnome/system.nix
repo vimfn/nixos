@@ -156,6 +156,8 @@
       python310Full
       htop
       tree
+      telegram-desktop
+      obs-studio
     ];
   };
 
