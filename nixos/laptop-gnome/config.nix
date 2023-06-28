@@ -94,6 +94,7 @@
 
   # Enable sound with pipewire.
   sound.enable = true;
+  hardware.bluetooth.settings.General.Experimental = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -117,9 +118,8 @@
     isNormalUser = true;
     description = "Arunava Ghosh";
     extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.zsh;
     packages = with pkgs; [
-      vscode
-      neovim
       curl
       brave
       discord
@@ -128,6 +128,7 @@
       nixpkgs-fmt
     ];
   };
+
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
