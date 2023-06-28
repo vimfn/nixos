@@ -1,8 +1,10 @@
 { pkgs, username, ... }:
 
 {
-  imports = 
- map (program: ../../home-manager/${program}.nix)
+  imports = [
+    ../../desktop-env/gnome/home.nix
+  ]
+  ++ map (program: ../../home-manager/${program}.nix)
     [ "zsh" "git" ];
 
   home = {
