@@ -7,7 +7,7 @@ lib.nixosSystem {
   };
   modules = [
     ./hardware.nix
-    ./config.nix
+    ./system.nix
     imported-modules.home-manager.nixosModules.home-manager
     {
       home-manager.useGlobalPkgs = true;

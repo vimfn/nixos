@@ -13,7 +13,7 @@
     "org/gnome/desktop/interface" = {
       clock-show-seconds = true;
       clock-show-weekday = true;
-      enable-hot-corners = false;
+      enable-hot-corners = true;
       font-antialiasing = "grayscale";
       font-hinting = "slight";
       monospace-font-name = "JetBrainsMono Nerd Font 10";
@@ -21,6 +21,8 @@
       gtk-theme = "Adwaita-dark";
       font-name = "SF Pro 11";
       document-font-name = "SF Pro 11";
+      cursor-size = 48;
+      text-scaling-factor = 1.25;
     };
     "org/gnome/mutter" = {
       attach-modal-dialogs = true;
