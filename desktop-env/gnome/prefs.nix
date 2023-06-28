@@ -8,6 +8,7 @@
     };
     "org/gnome/desktop/wm/preferences" = {
       action-middle-click-titlebar = "none";
+      title-bar-font = "SF Text Bold Pro 11";
     };
     "org/gnome/desktop/interface" = {
       clock-show-seconds = true;
@@ -15,8 +16,11 @@
       enable-hot-corners = false;
       font-antialiasing = "grayscale";
       font-hinting = "slight";
-      # monospace-font-name = "JetBrainsMono Nerd Font 10";
+      monospace-font-name = "JetBrainsMono Nerd Font 10";
       show-battery-percentage = true;
+      gtk-theme = "Adwaita-dark";
+      font-name = "SF Pro 11";
+      document-font-name = "SF Pro 11";
     };
     "org/gnome/mutter" = {
       attach-modal-dialogs = true;
