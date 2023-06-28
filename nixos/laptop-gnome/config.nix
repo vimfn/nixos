@@ -45,23 +45,24 @@
     ];
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
+  # boot.loader.systemd-boot.enable = true;
   # boot.loader.efi.canTouchEfiVariables = true;
 
-  boot = {
+ boot = {
     plymouth.enable = true;
     kernelPackages = pkgs.linuxPackages_latest;
+    initrd.kernelModules = [ "amdgpu" ];
     supportedFilesystems = [ "ntfs" ];
     loader = {
       efi = {
         canTouchEfiVariables = true;
-        efiSysMountPoint = "/boot"; #find this
+        efiSysMountPoint = "/boot";
       };
-      # grub = {
-      #   efiSupport = true;
-      #   device = "nodev";
-      #   useOSProber = true;
-      # };
+      grub = {
+        efiSupport = true;
+        device = "nodev";
+        useOSProber = true;
+      };
     };
   };
 
@@ -109,11 +110,17 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  security = {
+    rtkit.enable = true;
+    polkit.enable = true;
+    sudo.extraConfig = "Defaults !tty_tickets, pwfeedback";
+  };
+
   # Enable sound with pipewire.
   sound.enable = true;
   hardware.bluetooth.settings.General.Experimental = true;
   hardware.pulseaudio.enable = false;
-  security.rtkit.enable = true;
+  # security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
     alsa.enable = true;
