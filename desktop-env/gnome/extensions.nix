@@ -19,6 +19,8 @@
         "org.gnome.Console.desktop"
         "discord.desktop"
         "org.gnome.Calendar.desktop"
+        "com.obsproject.Studio.desktop" 
+        "org.telegram.desktop.desktop"
         "org.gnome.Settings.desktop"
         "org.gnome.TextEditor.desktop"
         "org.gnome.Calculator.desktop"

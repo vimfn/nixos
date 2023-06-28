@@ -5,7 +5,7 @@
 { config, pkgs, lib, ... }:
 
 {
-   # Make sure opengl is enabled
+  # Make sure opengl is enabled
   hardware.opengl = {
     enable = true;
     driSupport = true;
@@ -19,7 +19,7 @@
     ];
 
   # Tell Xorg to use the nvidia driver
-  services.xserver.videoDrivers = ["nvidia"];
+  services.xserver.videoDrivers = [ "nvidia" ];
 
   hardware.nvidia = {
 
@@ -37,7 +37,7 @@
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
-  
+
   imports =
     [
       # Include the results of the hardware scan.
@@ -48,7 +48,7 @@
   # boot.loader.systemd-boot.enable = true;
   # boot.loader.efi.canTouchEfiVariables = true;
 
- boot = {
+  boot = {
     plymouth.enable = true;
     kernelPackages = pkgs.linuxPackages_latest;
     initrd.kernelModules = [ "amdgpu" ];
@@ -101,6 +101,29 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
 
+  environment = {
+    gnome.excludePackages =
+      (with pkgs.gnome; [
+        baobab # disk usage analyzer
+        cheese # photo booth
+        epiphany # web browser
+        gedit # text editor
+        simple-scan # document scanner
+        totem # video player
+        yelp # help viewer
+        geary # email client
+        gnome-contacts
+        gnome-maps
+        gnome-music
+        gnome-system-monitor
+        gnome-weather
+        gnome-disk-utility
+      ]) ++ (with pkgs;[
+        gnome-connections
+        gnome-tour
+      ]);
+  };
+
   # Configure keymap in X11
   services.xserver = {
     layout = "us";
@@ -150,7 +173,7 @@
       git
       nil
       nixpkgs-fmt
-      rustup 
+      rustup
       nodejs_18
       nodePackages_latest.pnpm
       python310Full
@@ -181,6 +204,7 @@
       defaultFonts.monospace = [ "JetBrainsMono Nerd Font" ];
     };
   };
+
 
   programs.zsh.enable = true;
   # Allow unfree packages
