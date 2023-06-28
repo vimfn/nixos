@@ -2,46 +2,15 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, lib, ... }:
+{ pkgs, lib, ... }:
 
 {
-  # Make sure opengl is enabled
-  hardware.opengl = {
-    enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
-  };
-
-  # NVIDIA drivers are unfree.
-  nixpkgs.config.allowUnfreePredicate = pkg:
-    builtins.elem (lib.getName pkg) [
-      "nvidia-x11"
-    ];
-
-  # Tell Xorg to use the nvidia driver
-  services.xserver.videoDrivers = [ "nvidia" ];
-
-  hardware.nvidia = {
-
-    # Modesetting is needed for most wayland compositors
-    modesetting.enable = true;
-
-    # Use the open source version of the kernel module
-    # Only available on driver 515.43.04+
-    open = true;
-
-    # Enable the nvidia settings menu
-    nvidiaSettings = true;
-
-    # Optionally, you may need to select the appropriate driver version for your specific GPU.
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
-  };
-
 
   imports =
     [
       # Include the results of the hardware scan.
       # ./hardware-configuration.nix
+      ./nvidia.nix
     ];
 
   # Bootloader.
@@ -126,9 +95,9 @@
 
   # Configure keymap in X11
   services.xserver = {
-      layout = "us";
-      xkbVariant = "";
-      excludePackages = [ pkgs.xterm ];
+    layout = "us";
+    xkbVariant = "";
+    excludePackages = [ pkgs.xterm ];
   };
 
   # Enable CUPS to print documents.
