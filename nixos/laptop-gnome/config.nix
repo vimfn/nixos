@@ -153,6 +153,7 @@
       rustup 
       nodejs_18
       nodePackages_latest.pnpm
+      python310Full
     ];
   };
 
