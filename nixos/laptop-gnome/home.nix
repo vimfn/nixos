@@ -3,7 +3,7 @@
 {
   imports = 
  map (program: ../../home-manager/${program}.nix)
-    [ "zsh" ];
+    [ "zsh" "git" ];
 
   home = {
     inherit username;
