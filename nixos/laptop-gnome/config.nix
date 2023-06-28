@@ -159,6 +159,27 @@
     ];
   };
 
+  fonts = {
+    fonts = with pkgs; [
+      noto-fonts
+      noto-fonts-emoji
+      noto-fonts-cjk
+      jetbrains-mono
+      (import
+        ../sources/apple-fonts.nix
+        {
+          inherit lib;
+          inherit (pkgs) stdenv p7zip;
+          inherit (builtins) fetchurl;
+        })
+      (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    ];
+    fontconfig = {
+      enable = true;
+      defaultFonts.monospace = [ "JetBrainsMono Nerd Font" ];
+    };
+  };
+
   programs.zsh.enable = true;
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
