@@ -46,7 +46,24 @@
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  # boot.loader.efi.canTouchEfiVariables = true;
+
+  boot = {
+    plymouth.enable = true;
+    kernelPackages = pkgs.linuxPackages_latest;
+    supportedFilesystems = [ "ntfs" ];
+    loader = {
+      efi = {
+        canTouchEfiVariables = true;
+        efiSysMountPoint = "/boot"; #find this
+      };
+      # grub = {
+      #   efiSupport = true;
+      #   device = "nodev";
+      #   useOSProber = true;
+      # };
+    };
+  };
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
