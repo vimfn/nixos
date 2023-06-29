@@ -12,6 +12,7 @@
     homeDirectory = "/home/${username}";
     packages = with pkgs; [
       brave
+      vscode
       rustup
       celluloid
       nodePackages_latest.pnpm
@@ -19,6 +20,7 @@
       obs-studio
       neofetch
       nodejs
+      discord
       python3
     ];
     stateVersion = "23.05";
