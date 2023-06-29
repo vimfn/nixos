@@ -2,7 +2,7 @@
 {
 
   imports = [ 
-  # ../../desktop-env/gnome/gnome.nix 
+  # ../../desktop-env/gnome/system.nix 
   # ./nvidia.nix 
   ];
 

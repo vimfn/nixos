@@ -1,7 +1,7 @@
 { ... }:
 {
   imports = [
-    ../../desktop-env/gnome/system.nix
+    ../../desktop-env/hyprland/system.nix
     ../laptop/system.nix
     ../laptop/hardware.nix
   ];
