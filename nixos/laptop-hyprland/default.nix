@@ -16,11 +16,12 @@ lib.nixosSystem {
       };
       home-manager.users.${username} = {
         imports = [ ./home.nix ];
+        # modules = [
+        #   imported-modules.hyprland.homeManagerModules.default
+        #   { wayland.windowManager.hyprland.enable = true; }
+        # ];
       };
     }
-    imported-modules.hyprland.homeManagerModules.default
-    { wayland.windowManager.hyprland.enable = true; }
+
   ];
 }
-
-
