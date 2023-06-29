@@ -29,7 +29,7 @@
   users.users.${username} = {
     isNormalUser = true;
     description = "Arunava Ghosh";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker"];
     shell = pkgs.zsh;
   };
 
@@ -58,6 +58,8 @@
     polkit.enable = true;
     sudo.extraConfig = "Defaults !tty_tickets, pwfeedback";
   };
+
+  virtualisation.docker.enable = true;
 
   environment = {
     systemPackages = with pkgs; [

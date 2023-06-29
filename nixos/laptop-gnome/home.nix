@@ -22,6 +22,7 @@
       nodejs
       discord
       python3
+      tree
     ];
     stateVersion = "23.05";
   };
