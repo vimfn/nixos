@@ -10,6 +10,8 @@
       cls = "clear";
       vsc = "code - r";
       q = "exit";
+      pnpx = "pnpm dlx";
+      gcl = "git clone";
     };
   };
 }

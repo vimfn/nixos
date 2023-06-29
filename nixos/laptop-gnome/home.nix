@@ -1,11 +1,11 @@
-{ pkgs, username, ... }:
+{ username, ... }:
 
 {
   imports = [
     ../../desktop-env/gnome/home.nix
   ]
   ++ map (program: ../../home-manager/${program}.nix)
-    [ "zsh" "git" ];
+    [ "zsh" "git" "obs-studio"];
 
   home = {
     inherit username;
