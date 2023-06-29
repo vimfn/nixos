@@ -49,5 +49,8 @@
       event-sounds = false;
       theme-name = "__custom";
     };
+    "org/gnome/desktop/a11y" = {
+      always-show-universal-access-status = false;
+    };
   };
 }

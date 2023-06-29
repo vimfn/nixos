@@ -31,6 +31,7 @@
         efiSupport = true;
         device = "nodev";
         useOSProber = true;
+        fontSize = 16;
       };
     };
   };
