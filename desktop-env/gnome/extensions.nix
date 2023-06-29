@@ -4,6 +4,7 @@
     clipboard-indicator
     blur-my-shell
     cronomix
+    gnome-shell-extension-docker
   ];
 
   dconf.settings = {
@@ -14,6 +15,7 @@
         "blur-my-shell@aunetx"
         "launch-new-instance@gnome-shell-extensions.gcampax.github.com"
         "cronomix@zagortenay333"
+        "gnome-shell-extension-docker@lestcape"
       ];
       favorite-apps = [
         "org.gnome.Nautilus.desktop"
