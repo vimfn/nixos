@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../../desktop-env/gnome/home.nix
+    # ../../desktop-env/gnome/home.nix
   ]
   ++ map (program: ../../home-manager/${program}.nix)
     [ "zsh" "git" "direnv"];
