@@ -1,3 +1,4 @@
+{...}:
 {
   imports = [
     ../../desktop-env/gnome/home.nix

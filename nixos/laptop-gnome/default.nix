@@ -6,10 +6,7 @@ lib.nixosSystem {
     inherit system pkgs imported-modules username;
   };
   modules = [
-    ../laptop/hardware.nix
-    ../laptop/system.nix
     ./system.nix
-    ./home.nix
     imported-modules.home-manager.nixosModules.home-manager
     {
       home-manager.useGlobalPkgs = true;
@@ -18,7 +15,7 @@ lib.nixosSystem {
         inherit pkgs system imported-modules username;
       };
       home-manager.users.${username} = {
-        imports = [ ../laptop/home.nix ];
+        imports = [ ./home.nix ];
       };
     }
   ];
