@@ -3,8 +3,8 @@
     appindicator
     clipboard-indicator
     blur-my-shell
+    docker
     cronomix
-    gnome-shell-extension-docker
   ];
 
   dconf.settings = {
@@ -15,7 +15,7 @@
         "blur-my-shell@aunetx"
         "launch-new-instance@gnome-shell-extensions.gcampax.github.com"
         "cronomix@zagortenay333"
-        "gnome-shell-extension-docker@lestcape"
+        "docker@stickman_0x00.com"
       ];
       favorite-apps = [
         "org.gnome.Nautilus.desktop"
@@ -24,7 +24,7 @@
         "org.gnome.Console.desktop"
         "discord.desktop"
         "org.gnome.Calendar.desktop"
-        "com.obsproject.Studio.desktop" 
+        "com.obsproject.Studio.desktop"
         "org.telegram.desktop.desktop"
         "org.gnome.Settings.desktop"
         "org.gnome.TextEditor.desktop"

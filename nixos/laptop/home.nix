@@ -24,6 +24,7 @@
       python3
       tree
       blanket
+      python310Packages.pip
     ];
     stateVersion = "23.05";
   };
