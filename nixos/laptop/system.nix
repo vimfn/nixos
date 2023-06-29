@@ -71,7 +71,6 @@
       nixpkgs-fmt
       zip
       unzip
-      kitty
     ];
   };
   services = {

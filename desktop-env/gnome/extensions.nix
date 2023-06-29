@@ -3,6 +3,7 @@
     appindicator
     clipboard-indicator
     blur-my-shell
+    cronomix
   ];
 
   dconf.settings = {
@@ -12,6 +13,7 @@
         "appindicatorsupport@rgcjonas.gmail.com"
         "blur-my-shell@aunetx"
         "launch-new-instance@gnome-shell-extensions.gcampax.github.com"
+        "cronomix@zagortenay333"
       ];
       favorite-apps = [
         "org.gnome.Nautilus.desktop"

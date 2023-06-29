@@ -23,6 +23,7 @@
       discord
       python3
       tree
+      blanket
     ];
     stateVersion = "23.05";
   };
