@@ -8,6 +8,8 @@ lib.nixosSystem {
   modules = [
     ../laptop/hardware.nix
     ../laptop/system.nix
+    ./system.nix
+    ./home.nix
     imported-modules.home-manager.nixosModules.home-manager
     {
       home-manager.useGlobalPkgs = true;
