@@ -18,6 +18,8 @@ lib.nixosSystem {
         imports = [ ./home.nix ];
       };
     }
+    imported-modules.hyprland.homeManagerModules.default
+    { wayland.windowManager.hyprland.enable = true; }
   ];
 }
 
