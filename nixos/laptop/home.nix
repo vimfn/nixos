@@ -25,6 +25,7 @@
       tree
       blanket
       python310Packages.pip
+      protonvpn-gui
     ];
     stateVersion = "23.05";
   };
