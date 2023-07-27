@@ -20,7 +20,6 @@
       obs-studio
       neofetch
       nodejs
-      discord
       python3
       tree
       blanket
