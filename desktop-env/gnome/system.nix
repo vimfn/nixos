@@ -26,5 +26,4 @@
         gnome-tour
       ]);
   };
-  programs.gnome-terminal.enable = true;
 }

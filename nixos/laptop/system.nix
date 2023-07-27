@@ -130,7 +130,6 @@
       enable = true;
       enableSSHSupport = true;
     };
-    gnome-terminal.enable = true;
   };
   networking = {
     hostName = "nixos";
