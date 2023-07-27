@@ -6,12 +6,12 @@ stdenv.mkDerivation rec {
 
   pro = fetchurl {
     url = "https://devimages-cdn.apple.com/design/resources/download/SF-Pro.dmg";
-    sha256 = "19qa6fs6x5614sqw9a6idlizzsssw8256crz1ps2p2n6gwp2fvaq";
+    sha256 = "1ch7bi43fb95yz9742ba7k7sckgifl96p7xj3r7k01br561xx12y";
   };
 
   compact = fetchurl {
     url = "https://devimages-cdn.apple.com/design/resources/download/SF-Compact.dmg";
-    sha256 = "02127drlqvwscq6vaphmvsp85cn8j4zfhi0kb9a3fzc0z8b95hdq";
+    sha256 = "1aqz9g6ndgb4ilqbqbw7ps0zf4kafbhlwk8py6sgqn42gs5khsgf";
   };
 
   mono = fetchurl {
