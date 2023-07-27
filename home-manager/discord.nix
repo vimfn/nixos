@@ -6,7 +6,7 @@
         withVencord = true;
         withTTS = false;
       })
-      # discord-krisp-patch
+      discord-krisp-patch
     ];
   };
 }
