@@ -8,4 +8,8 @@
     inherit (imported-modules.nixpkgs) lib;
     inherit imported-modules pkgs username system;
   };
+  laptop-i3 = import ./laptop-i3 {
+    inherit (imported-modules.nixpkgs) lib;
+    inherit imported-modules pkgs username system;
+  };
 }
